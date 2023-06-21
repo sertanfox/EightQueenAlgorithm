@@ -101,16 +101,6 @@ public class Main {
         int localColumn;
         int localRow;
 
-        //region Check Left
-        localColumn = column;
-        localRow = row;
-        while(localColumn >= 0){
-            if(TABLE[localRow][localColumn]==QUEEN)
-                return false;
-            localColumn--;
-        }
-        //endregion
-
         //region Check Top
         localColumn = column;
         localRow = row;
@@ -118,26 +108,6 @@ public class Main {
             if(TABLE[localRow][localColumn]==QUEEN)
                 return false;
             localRow--;
-        }
-        //endregion
-
-        //region Check Right
-        localColumn = column;
-        localRow = row;
-        while(localColumn <8){
-            if(TABLE[localRow][localColumn]==QUEEN)
-                return false;
-            localColumn++;
-        }
-        //endregion
-
-        //region Check Bottom
-        localColumn = column;
-        localRow = row;
-        while(localRow < 8){
-            if(TABLE[localRow][localColumn]==QUEEN)
-                return false;
-            localRow++;
         }
         //endregion
 
@@ -158,26 +128,6 @@ public class Main {
             if(TABLE[localRow][localColumn]==QUEEN)
                 return false;
             localRow--; localColumn++;
-        }
-        //endregion
-
-        //region Check Bottom Left
-        localColumn = column;
-        localRow = row;
-        while(localRow <8 && localColumn >= 0){
-            if(TABLE[localRow][localColumn]==QUEEN)
-                return false;
-            localRow++; localColumn--;
-        }
-        //endregion
-
-        //region Check Bottom Right
-        localColumn = column;
-        localRow = row;
-        while(localRow < 8 && localColumn < 8){
-            if(TABLE[localRow][localColumn]==QUEEN)
-                return false;
-            localRow++; localColumn++;
         }
         //endregion
 
